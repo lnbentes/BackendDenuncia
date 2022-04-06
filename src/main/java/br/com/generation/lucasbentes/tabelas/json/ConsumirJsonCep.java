@@ -9,10 +9,10 @@ public class ConsumirJsonCep {
 		String bairro;
 		String localidade;
 		String uf;
-	    long ibge;
-	    int  gia;
-	    int  ddd;
-	    int  siafi;
+		String ibge;
+		String  gia;
+		String  ddd;
+		String  siafi;
 	}
 	
 	// Agora os atributos e metodos da classe ConsumirJsonCep
@@ -45,19 +45,19 @@ public class ConsumirJsonCep {
 		return cep.uf;
 	}
 	
-	public long getIbge() {
+	public String getIbge() {
 		return cep.ibge;
 	}
 	
-	public int getGia() {
+	public String getGia() {
 		return cep.gia;
 	}
 	
-	public int getDdd() {
+	public String getDdd() {
 		return cep.ddd;
 	}
 
-	public int getSiafi() {
+	public String getSiafi() {
 		return cep.siafi;
 	}
 }

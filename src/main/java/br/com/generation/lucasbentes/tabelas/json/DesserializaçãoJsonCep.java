@@ -12,9 +12,9 @@ public class DesserializaçãoJsonCep {
     
     public ConsumirJsonCep getDados(String cep) throws Exception {
         try{
-            json = leitorURL.readUrl("https://viacep.com.br/ws/" + cep + "/json");
+            json = leitorURL.readUrl("https://viacep.com.br/ws/" + cep + "/json/");
         }catch (Exception e){
-            System.out.println("URL errada");
+            System.out.println("URL errada: \n" + e);
         }
 
 

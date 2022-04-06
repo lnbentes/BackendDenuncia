@@ -9,6 +9,10 @@ public class DesserializaçãoJsonCep {
     String json;  // Ela vai receber a string do leitorUrl
     ConsumirJsonCep cepJson;  // vai receber os dados
     
+    public DesserializaçãoJsonCep() {
+    	leitorURL = new LeitorURL();
+    	gson = new Gson();
+    }
     
     public ConsumirJsonCep getDados(String cep) throws Exception {
         try{

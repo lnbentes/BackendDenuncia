@@ -26,35 +26,6 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRepository repository;
 	
-	@GetMapping
-	public ResponseEntity<List<Usuario>> getAll(){
-		return ResponseEntity.ok(repository.findAll());
-	}
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<Usuario> getByID(@PathVariable Long id){
-		return  repository.findById(id).map(resp -> ResponseEntity.ok(resp))
-					.orElse(ResponseEntity.notFound().build());
-	}
-	
-	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Usuario>> getByNome(@PathVariable String nome){
-		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
-	}
-	
-	@PostMapping
-	public ResponseEntity<Usuario> post(@RequestBody Usuario usuario){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
-	}
-	
-	@PutMapping
-	public ResponseEntity<Usuario> put(@RequestBody Usuario usuario){
-		return ResponseEntity.ok(repository.save(usuario));
-	}
-	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable Long id) {
-		repository.deleteById(id);
-	}
 	
 }

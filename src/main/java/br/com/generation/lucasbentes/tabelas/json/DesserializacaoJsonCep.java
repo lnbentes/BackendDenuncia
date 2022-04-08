@@ -2,14 +2,14 @@ package br.com.generation.lucasbentes.tabelas.json;
 
 import com.google.gson.Gson;
 
-public class DesserializaçãoJsonCep {
+public class DesserializacaoJsonCep {
 	
 	LeitorURL leitorURL;  // Vai fazer a conversao de url para string
     Gson gson;  // Api que vai fazer a juncao dos dados json com a classe
     String json;  // Ela vai receber a string do leitorUrl
     ConsumirJsonCep cepJson;  // vai receber os dados
     
-    public DesserializaçãoJsonCep() {
+    public DesserializacaoJsonCep() {
     	leitorURL = new LeitorURL();
     	gson = new Gson();
     }
